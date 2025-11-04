@@ -74,4 +74,79 @@ Use your Atlassian email as JIRA_EMAIL.
 Find your Jira domain like https://yourname.atlassian.net.
 
 
+🧩 Step-by-Step Workflow
+Step 1 — Fetch Jira Data
+Fetch the latest issues from your Jira project and save them into data/updates.csv.
+python -c "from src.fetch_jira import fetch_jira_updates; fetch_jira_updates()"
+✔ Automatically detects your Jira project
+✔ Saves issues (with names, summaries, statuses, and dates)
 
+Step 2 — Build Vector Store
+Once updates.csv is ready, build a Chroma vector database:
+python test.py
+
+
+Step 3 — Generate the AI Stand-Up Report
+Now generate the full AI-powered summary:
+python main.py
+
+
+Example Output-
+🧠 Generating AI Stand-Up Report...
+
+🔍 Retrieving data for query: summarize updates from 2025-11-04
+
+🧠 Generating AI Stand-Up Summary...
+
+📋 AI-Generated Stand-Up Report:
+
+✅ Tasks Completed (Done)
+- Alice: Fixed login issue (KAN-3)
+- Bob: Deployed build to staging
+
+⚙️ Tasks In Progress
+- Charlie: Working on database schema
+
+🗓️ Tasks Planned (To Do)
+- Diana: Begin frontend refactoring
+
+🧱 Blockers
+- None
+
+
+
+🧭 Dynamic Project Selection
+
+If you have multiple Jira projects, the system automatically:
+
+Detects available projects using /rest/api/3/project/search
+
+Lets you choose which project to summarize
+
+Or auto-selects the first one if you prefer hands-off mode
+
+🧰 Tech Stack
+
+Python 3.10+
+
+LangChain + Groq LLM
+
+HuggingFace Embeddings
+
+Chroma Vector Store
+
+Pandas
+
+Jira REST API (v3)
+
+Dotenv for secure environment handling
+
+👨‍💻 Author
+
+Harshdeep Singh
+AI/ML Developer • B.Tech CSE @ Pranveer Singh Institute of Technology
+📧 harshdeep.s5423@gmail.com
+
+📜 License
+
+This project is licensed under the MIT License — feel free to use, modify, and share.
