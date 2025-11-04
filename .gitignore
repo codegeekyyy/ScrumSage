@@ -1,0 +1,66 @@
+# --------------------------
+# Python environment
+# --------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# --------------------------
+# System files
+# --------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------
+# Logs and caches
+# --------------------------
+*.log
+*.tmp
+*.cache/
+*.bak
+
+# --------------------------
+# IDE settings
+# --------------------------
+.vscode/
+.idea/
+
+# --------------------------
+# Environment variables
+# --------------------------
+.env
+*.env
+
+# --------------------------
+# Data and generated files
+# --------------------------
+data/updates.csv
+chroma_db/
+*.db
+*.sqlite3
+
+# --------------------------
+# LangChain / AI cache
+# --------------------------
+langchain/
+outputs/
+logs/
+checkpoints/
+
+# --------------------------
+# Build / distribution
+# --------------------------
+dist/
+build/
+*.egg-info/
+*.spec
+
+# --------------------------
+# Jupyter notebooks (optional)
+# --------------------------
+.ipynb_checkpoints/
