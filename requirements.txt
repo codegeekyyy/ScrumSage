@@ -1,0 +1,28 @@
+# Core Python Tools
+python-dotenv
+pandas
+requests
+
+# LangChain Core
+langchain
+langchain-community
+langchain-core
+
+# LLM Models (OpenAI)
+openai
+
+# Vector Database (for RAG and memory)
+chromadb
+
+# Optional: Local Embedding Models (if you use HuggingFace later)
+sentence-transformers
+
+# Optional: Web UI (for dashboard or chatbot)
+streamlit
+
+# Optional: Async Tasks / Scheduling
+schedule
+
+# Optional: Linting & Dev Tools
+black
+flake8
