@@ -38,3 +38,40 @@ AI_report_generator/
 ├── test.py ← Optional: build vector store manually
 └── README.md ← Documentation (you’re reading it!)
 
+
+
+
+---
+
+## ⚙️ Features
+
+✅ Fetches latest **Jira issues** (To Do, In Progress, Done)  
+✅ Converts Jira task updates into structured data  
+✅ Uses **LangChain + Groq LLM** to generate natural-language summaries  
+✅ Embeds and retrieves data using **HuggingFace + Chroma vector store**  
+✅ Supports **dynamic Jira project selection**  
+✅ Produces detailed stand-up reports with an **AI-written summary**
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root with the following:
+
+```bash
+# Jira configuration
+JIRA_DOMAIN=https://your-domain.atlassian.net
+JIRA_EMAIL=youremail@example.com
+JIRA_API_TOKEN=your_api_token_here
+
+# Groq API key (for LLM)
+GROQ_API_KEY=your_groq_api_key_here
+
+📝 To get Jira credentials:
+Go to Atlassian API Tokens
+Click Create API Token and copy it.
+Use your Atlassian email as JIRA_EMAIL.
+Find your Jira domain like https://yourname.atlassian.net.
+
+
+
