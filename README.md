@@ -74,7 +74,7 @@ Use your Atlassian email as JIRA_EMAIL.
 Find your Jira domain like https://yourname.atlassian.net.
 
 
-🧩 Step-by-Step Workflow
+**🧩 Step-by-Step Workflow
 Step 1 — Fetch Jira Data
 Fetch the latest issues from your Jira project and save them into data/updates.csv.
 python -c "from src.fetch_jira import fetch_jira_updates; fetch_jira_updates()"
@@ -150,3 +150,5 @@ AI/ML Developer • B.Tech CSE @ Pranveer Singh Institute of Technology
 📜 License
 
 This project is licensed under the MIT License — feel free to use, modify, and share.
+
+**
