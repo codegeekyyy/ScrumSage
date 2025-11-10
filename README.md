@@ -25,6 +25,9 @@ AI_report_generator/
 ├── data/
 │ └── updates.csv ← Stores task data fetched from Jira
 │
+├── updates/
+│ └── update_YYYY-MM-DD.md ← Optional daily-per-report markdown files (example files for manual or automated updates)
+│
 ├── src/
 │ ├── ai_pipeline.py ← Main AI logic: summarize + generate reports
 │ ├── vector_store.py ← Handles vector embeddings and document search

@@ -1,8 +1,26 @@
 import os
+<<<<<<< HEAD
+=======
+import requests
+>>>>>>> 93976e3 (main file and ai pipeline file)
 from datetime import datetime
 from src.fetch_jira import fetch_jira_updates
 from src.vector_store import create_vector_store
 from src.ai_pipeline import run_ai_pipeline
+def send_to_slack(message):
+     """Send the generated report to Slack using an Incoming Webhook."""
+     webhook_url=os.getenv("SLACK_WEBHOOK_URL")
+     if not webhook_url:
+         print("⚠️ SLACK_WEBHOOK_URL not set in environment variables.")
+         return
+     payload={"text": message}
+     response=requests.post(webhook_url,json=payload)
+     if response.status_code==200:
+         print("✅ Report successfully sent to Slack.")
+     else:
+         print(f"⚠️ Failed to send report to Slack. Status code: {response.text}")
+def main():
+    print("🧠 AI Stand-Up Report Generator\n")
 
 def main():
     print("🧠 AI Stand-Up Report Generator\n")
@@ -36,6 +54,13 @@ def main():
 
         print("📋 AI-Generated Stand-Up Report:\n")
         print(report)
+<<<<<<< HEAD
+=======
+
+
+        send_to_slack(report)
+        send_to_slack(f"🧠 *AI Daily Stand-Up Report*\n\n{report}")
+>>>>>>> 93976e3 (main file and ai pipeline file)
     else:
         print("⚠️ No report generated.")
 

@@ -37,7 +37,6 @@ def run_ai_pipeline(query=None):
         text = "\n".join([f"{doc.metadata['name']}: {doc.page_content}" for doc in res])
 
     print("🧠 Generating AI Stand-Up Summary...\n")
-    print("📝 DEBUG: Text sent to model:\n", text)
     report = generate_standup_report_from_text(text)
     return report
 
